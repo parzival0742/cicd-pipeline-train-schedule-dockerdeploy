@@ -16,7 +16,7 @@ pipeline {
                 script{
                     app = docker.build("parzival0742/train-schedule")
                     app.inside {
-                        sh 'ehco $(curl localhost:8080)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
